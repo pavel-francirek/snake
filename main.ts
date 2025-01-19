@@ -1,9 +1,12 @@
 let direction = 0
+//  0: N, 1: E, 2: S, 3: W
 let food = [0, 0]
 let direction_change = [[0, -1], [1, 0], [0, 1], [-1, 0]]
+//  init
 let snake = [[2, 2]]
 led.plot(2, 2)
 function set_food() {
+    //  create new "food"
     
     food = [randint(0, 4), randint(0, 4)]
     led.plotBrightness(food[0], food[1], 27)
@@ -14,8 +17,10 @@ function snake_run() {
     let in_snake: boolean;
     
     while (true) {
+        //  main loop
         basic.pause(1000)
         new_point = [snake[0][0] + direction_change[direction][0], snake[0][1] + direction_change[direction][1]]
+        //  check if new point (new part of snake) hits existing body of snake
         in_snake = false
         for (let s of snake) {
             if (s[0] == new_point[0] && s[1] == new_point[1]) {
@@ -23,6 +28,7 @@ function snake_run() {
             }
             
         }
+        //  end game condition
         if (new_point[0] < 0 || new_point[0] > 4 || new_point[1] < 0 || new_point[1] > 4 || in_snake) {
             music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Dadadadum), music.PlaybackMode.InBackground)
             basic.showIcon(IconNames.Angry)
@@ -31,9 +37,11 @@ function snake_run() {
         }
         
         if (new_point[0] == food[0] && new_point[1] == food[1]) {
+            //  food is eaten
             set_food()
         } else {
             if (snake[snake.length - 1][0] != food[0] || snake[snake.length - 1][1] != food[1]) {
+                //  if there is no new created food "inside" snake
                 led.unplot(snake[snake.length - 1][0], snake[snake.length - 1][1])
             }
             
