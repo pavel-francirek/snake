@@ -1,24 +1,23 @@
 
-> Otevřít tuto stránku v aplikaci [https://pavel-francirek.github.io/snake/](https://pavel-francirek.github.io/snake/)
+> Open this page in the application [https://pavel-francirek.github.io/snake/](https://pavel-francirek.github.io/snake/)
 
-## Použít jako rozšíření
+## Use as an extension
 
-Tento repozitář lze přidat jako **rozšíření** v aplikaci MakeCode.
+This repository can be added as an **extension** in the MakeCode application.
 
-* otevřít [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* klikněte na možnost **Nový projekt**
-* klikněte na možnost **Rozšíření** v nabídce s ozubeným kolem
-* vyhledat **https://github.com/pavel-francirek/snake** a importovat
+* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
+* click on **New Project**
+* click on **Extensions** in the gear menu
+* search for **https://github.com/pavel-francirek/snake** and import
 
-## Upravit tento projekt
+## Edit this project
 
-Slouží k úpravě tohoto úložiště v aplikaci MakeCode.
+Used to edit this repository in the MakeCode application.
 
-* otevřít [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* klikněte na možnost **Import** a poté na **Import adresy URL**
-* vložte **https://github.com/pavel-francirek/snake** a klikněte na možnost import
+* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
+* click on **Import** and then on **Import URL**
+* paste **https://github.com/pavel-francirek/snake** and click on import
 
-#### Metadata (slouží k vyhledávání, vykreslování)
+#### Metadata (used for search, rendering)
 
 * for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
