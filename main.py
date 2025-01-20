@@ -36,6 +36,7 @@ def snake_run():
         if new_point[0] < 0 or new_point[0] > 4 or new_point[1] < 0 or new_point[1] > 4 or in_snake:
             music._play_default_background(music.built_in_playable_melody(Melodies.DADADADUM), music.PlaybackMode.IN_BACKGROUND)
             basic.show_icon(IconNames.ANGRY)
+            basic.clear_screen()
             basic.show_number(len(snake))
             return
         if new_point[0] == food[0] and new_point[1] == food[1]:

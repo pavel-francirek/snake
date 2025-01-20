@@ -32,6 +32,7 @@ function snake_run() {
         if (new_point[0] < 0 || new_point[0] > 4 || new_point[1] < 0 || new_point[1] > 4 || in_snake) {
             music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Dadadadum), music.PlaybackMode.InBackground)
             basic.showIcon(IconNames.Angry)
+            basic.clearScreen()
             basic.showNumber(snake.length)
             return
         }
